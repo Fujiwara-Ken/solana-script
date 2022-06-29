@@ -1,0 +1,16 @@
+{
+  "name": "wallet_scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@solana-suite/core": "latest",
+    "@solana-suite/nft": "latest",
+    "@solana-suite/shared": "latest"
+  },
+  "author": "",
+  "license": "ISC"
+}
