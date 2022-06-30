@@ -1,6 +1,7 @@
 import { KeypairStr, SolNative } from "@solana-suite/core";
+import "dotenv/config";
 
-// feePayer に SOL をす
+// feePayer に SOL を送金する
 const transferFee = async () => {
   const owner = new KeypairStr(
     process.env.OWNER_PUBKEY || "",

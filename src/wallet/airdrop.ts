@@ -1,4 +1,5 @@
 import { Account, KeypairStr } from "@solana-suite/core";
+import "dotenv/config";
 
 // 開発用の SOL を5SOL取得
 const airdrop = async () => {
