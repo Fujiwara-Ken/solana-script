@@ -1,6 +1,7 @@
 import { KeypairStr, Pubkey, SplToken } from "@solana-suite/core";
 import "dotenv/config";
 
+// 独自のSPLトークンを取得する
 const createToken = async () => {
   const owner = new KeypairStr(
     process.env.OWNER_PUBKEY || "",
