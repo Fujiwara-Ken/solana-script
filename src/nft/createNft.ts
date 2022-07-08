@@ -3,7 +3,7 @@ import assert from "assert";
 import { Transaction, Pubkey, KeypairStr } from "@solana-suite/core";
 import { Metaplex, MetaplexInstructure } from "@solana-suite/nft";
 
-// NFT生成関数 urlはuploadContents関数から取得
+// NFT生成関数 urlはuploadContents関数から取得し、引数に渡す
 const createNft = async (name: string, url: string, account: KeypairStr) => {
   const metadata = new MetaplexInstructure.Data({
     name,
