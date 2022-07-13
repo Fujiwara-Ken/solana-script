@@ -1,7 +1,11 @@
+//////////////////////////////////////////////
+// $ npx ts-node src/spl-token/createToken.ts
+//////////////////////////////////////////////
+
 import { KeypairStr, Pubkey, SplToken } from "@solana-suite/core";
 import "dotenv/config";
 
-// 独自のSPLトークンを取得する
+// 独自のSPLトークンを発行する
 const createToken = async () => {
   const owner = new KeypairStr(
     process.env.OWNER_PUBKEY || "",

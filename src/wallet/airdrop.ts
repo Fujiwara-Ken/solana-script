@@ -1,3 +1,7 @@
+//////////////////////////////////////////////
+// $ npx ts-node src/wallet/airdrop.ts
+//////////////////////////////////////////////
+
 import { Account, KeypairStr } from "@solana-suite/core";
 import "dotenv/config";
 
