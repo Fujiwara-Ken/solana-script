@@ -2,7 +2,7 @@
 // $ npx ts-node src/spl-token/createToken.ts
 //////////////////////////////////////////////
 
-import { KeypairStr, Pubkey, SplToken } from "@solana-suite/core";
+import { Account, KeypairStr, Pubkey, SplToken } from "@solana-suite/core";
 import "dotenv/config";
 
 // 独自のSPLトークンを発行する
@@ -23,7 +23,7 @@ const createToken = async () => {
 
   const mint = inst1.unwrap().data as Pubkey;
 
-  // this is NFT ID
+  // SPLトークンを示す文字列
   console.log("# mint: ", mint);
 };
 
