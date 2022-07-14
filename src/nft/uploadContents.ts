@@ -17,7 +17,7 @@ export const uploadContents = async (
   const url = await StorageNftStorage.upload(asset);
 
   if (url.isErr) {
-    assert(url.error);
+    assert.fail(url.error);
   }
 
   console.log(url);

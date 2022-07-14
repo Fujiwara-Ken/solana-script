@@ -17,6 +17,6 @@ export const transferNft = async (
 
   (await [inst2].submit()).match(
     (value) => console.log("# Transfer nft sig: ", value.toExplorerUrl()),
-    (error) => assert(error)
+    (error) => assert.fail(error)
   );
 };

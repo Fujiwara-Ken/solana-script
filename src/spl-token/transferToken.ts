@@ -12,9 +12,12 @@ const transferToken = async () => {
     process.env.OWNER_SECRET || ""
   );
 
+  // 受け取り用ウォレット生成
   const receipt = Account.create();
 
-  const mint = process.env.TOKEN_KEY;
+  console.log("receipt", receipt);
+
+  const mint = process.env.TOKEN_KEY as string;
   console.log("#mint", mint);
   const decimals = 1;
 
@@ -32,7 +35,7 @@ const transferToken = async () => {
       console.log("# Transfer nft sig: ", value.toExplorerUrl());
       await Transaction.confirmedSig(value);
     },
-    (error) => assert(error)
+    (error) => assert.fail(error)
   );
 };
 

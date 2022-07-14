@@ -28,7 +28,7 @@ const createNft = async (name: string, url: string, account: KeypairStr) => {
     async (value) => {
       await Transaction.confirmedSig(value, "finalized");
     },
-    (error) => assert(error)
+    (error) => assert.fail(error)
   );
 
   const mint = inst1.unwrap().data as Pubkey;
