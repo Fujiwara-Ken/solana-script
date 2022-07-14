@@ -1,28 +1,24 @@
-import assert from "assert";
-import { Transaction } from "@solana-suite/core";
+//////////////////////////////////////////////
+// $ npx ts-node src/transaction/getTransactionHistory.ts
+//////////////////////////////////////////////
 
-//
-const hist1 = await Transaction.getTokenHistory(
-  mint.toPublicKey(), // used mint
-  owner.toPublicKey() // search key
-);
-console.log("# token history by publish: ", hist1.unwrap());
+import { KeypairStr, Transaction } from "@solana-suite/core";
+import "dotenv/config";
 
-// Not token history(Difference between getHistory and getTokenHistory)
-const hist2 = await Transaction.getHistory(
-  owner.toPublicKey(), // search key
-  {
-    actionFilter: [Transaction.Filter.Create], // Only 'create' history
-  }
-);
-console.log("# history by create action filter: ", hist2.unwrap());
+// 指定したSPLトークンとウォレットの入手金履歴を取得する
+const getTransactionHistory = async () => {
+  const owner = new KeypairStr(
+    process.env.OWNER_PUBKEY || "",
+    process.env.OWNER_SECRET || ""
+  );
 
-// History of receiptkey as the main destitnation.
-const hist3 = await Transaction.getTokenHistory(
-  mint.toPublicKey(),
-  receipt.toPublicKey(),
-  {
-    directionFilter: Transaction.DirectionFilter.Dest, // Dest or Source
-  }
-);
-console.log("# token history result by destination filter : ", hist3.unwrap());
+  const mint = process.env.TOKEN_KEY as string;
+
+  const hist1 = await Transaction.getTokenHistory(
+    mint.toPublicKey(),
+    owner.toPublicKey()
+  );
+  console.log("# token history by publish: ", hist1.unwrap());
+};
+
+getTransactionHistory();

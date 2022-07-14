@@ -18,8 +18,7 @@ const transferToken = async () => {
   console.log("receipt", receipt);
 
   const mint = process.env.TOKEN_KEY as string;
-  console.log("#mint", mint);
-  const decimals = 1;
+  const decimals = process.env.decimals as unknown as number;
 
   const inst2 = await SplToken.transfer(
     mint.toPublicKey(),
