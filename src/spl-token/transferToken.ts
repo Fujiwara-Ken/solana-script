@@ -1,6 +1,7 @@
 //////////////////////////////////////////////
 // $ npx ts-node src/spl-token/transferToken.ts
 //////////////////////////////////////////////
+
 import assert from "assert";
 import { Account, KeypairStr, SplToken, Transaction } from "@solana-suite/core";
 import "dotenv/config";

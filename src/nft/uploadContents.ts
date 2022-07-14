@@ -1,8 +1,11 @@
-import assert from "assert";
+//////////////////////////////////////////////
+// $ npx ts-node src/transaction/getTransactionHistory.ts
+//////////////////////////////////////////////
 
+import assert from "assert";
 import { StorageNftStorage } from "@solana-suite/nft";
 
-// カスタムパラメーターを付与したNFTStorageアップロード機能
+// NFTStorageに画像アップロード
 export const uploadContents = async (
   name: string,
   description: string,
@@ -24,3 +27,5 @@ export const uploadContents = async (
 
   return url.unwrap();
 };
+
+uploadContents("testname", "testdescription", "./asset/sample-image.jpg");
