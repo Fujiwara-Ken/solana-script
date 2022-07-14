@@ -1,3 +1,7 @@
+//////////////////////////////////////////////
+// $ npx ts-node src/spl-token/transferFeePayer.ts
+//////////////////////////////////////////////
+
 import { KeypairStr, SolNative } from "@solana-suite/core";
 import "dotenv/config";
 

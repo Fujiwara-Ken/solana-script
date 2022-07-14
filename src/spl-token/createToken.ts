@@ -2,7 +2,7 @@
 // $ npx ts-node src/spl-token/createToken.ts
 //////////////////////////////////////////////
 
-import { Account, KeypairStr, Pubkey, SplToken } from "@solana-suite/core";
+import { KeypairStr, Pubkey, SplToken } from "@solana-suite/core";
 import "dotenv/config";
 
 // 独自のSPLトークンを発行する

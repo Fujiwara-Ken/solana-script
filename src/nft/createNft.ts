@@ -1,3 +1,7 @@
+//////////////////////////////////////////////
+// $ npx ts-node src/nft/createNft.ts
+//////////////////////////////////////////////
+
 import assert from "assert";
 
 import { Transaction, Pubkey, KeypairStr } from "@solana-suite/core";
