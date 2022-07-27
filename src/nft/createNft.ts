@@ -2,6 +2,9 @@
 // $ npx ts-node src/nft/createNft.ts
 //////////////////////////////////////////////
 
+// Warning : metadataに用いる symbol の値は5文字以下にすること
+// Warning : metadataに用いる name の値は10文字以下にすること
+
 import assert from "assert";
 
 import { Transaction, Pubkey, KeypairStr } from "@solana-suite/core";

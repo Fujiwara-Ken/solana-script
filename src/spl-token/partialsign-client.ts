@@ -1,3 +1,7 @@
+//////////////////////////////////////////////
+// $ npx ts-node src/spl-token/partialsign-clinet.ts
+//////////////////////////////////////////////
+
 import assert from "assert";
 import { SplToken } from "@solana-suite/core";
 
