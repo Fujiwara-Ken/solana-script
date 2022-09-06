@@ -2,7 +2,7 @@
 // $ npx ts-node src/wallet/airdrop.ts
 //////////////////////////////////////////////
 
-import { Account, KeypairStr } from "@solana-suite/core";
+import { Airdrop, KeypairStr } from "@solana-suite/core";
 import "dotenv/config";
 
 // 開発用の SOL を1SOL取得
@@ -14,12 +14,9 @@ const airdrop = async () => {
 
   console.log("#owner", owner);
 
-  await Account.requestAirdrop(owner.toPublicKey());
+  await Airdrop.request(owner.toPublicKey());
 
-  console.log(
-    "# owner balance: ",
-    await Account.getBalance(owner.toPublicKey())
-  );
+  console.log("# owner balance: ", await Airdrop.request(owner.toPublicKey()));
 };
 
 airdrop();
